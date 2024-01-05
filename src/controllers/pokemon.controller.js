@@ -3,8 +3,8 @@ const axios = require('axios');
 exports.getAllPokemons = async (req, res) => {
     try {
         const { data } = await axios.get('https://pokeapi.co/api/v2/pokemon?limit=1000');
-        const pokemons = data.results.map((pokemon) => pokemon.name).sort();
-    res.json(pokemons);
+        const pokemons = data.results.sort((a, b) => a.name.localeCompare(b.name)).map((pokemon) => pokemon);
+        res.json(pokemons);
     } catch (error) {
         console.error(error);
         res.status(500).json({ error: 'Server Error' });
@@ -16,7 +16,7 @@ exports.getPokemonsByPage = async (req, res) => {
         const { page, limit } = req.query;
         const offset = (page - 1) * limit;
         const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`);
-        const pokemons = data.results.map((pokemon) => pokemon.name).sort();
+        const pokemons = data.results.sort((a, b) => a.name.localeCompare(b.name)).map((pokemon) => pokemon);;
         res.json(pokemons);
     } catch (error) {
         console.error(error);
@@ -26,11 +26,10 @@ exports.getPokemonsByPage = async (req, res) => {
 
 exports.searchPokemons = async (req, res) => {
     try {
-        const { search } = req.query;
-        const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/${search}`);
-    res.json([data.name]);
+        const { data } = await axios.get(`https://pokeapi.co/api/v2/pokemon/3`);
+        res.json([data]);
     } catch (error) {
         console.error(error);
-        res.status(500).json({ error: 'Error interno del Server Error' });
+        res.status(500).json({ error: 'Server Error' });
     }
 };
