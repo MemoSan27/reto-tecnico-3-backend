@@ -4,6 +4,6 @@ const pokeController = require('../controllers/pokemon.controller');
 
 router.get('/', pokeController.getAllPokemons);
 router.get('/paginated', pokeController.getPokemonsByPage);
-router.get('/search', pokeController.searchPokemons);
+router.get('/search/:id', pokeController.searchPokemons);
 
 module.exports = router;
