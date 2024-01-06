@@ -35,7 +35,7 @@ Al pegar en la raiz del proyecto la copia de el archivo ".env.template", hay que
 Una vez creado este nuevo archivo ".env" debemos asignar a la variable "PORT" el numero de puerto en el que vamos a querer trabajar.
 
 ## 5. Inicializar el servidor
-Este es el ultimo paso en el cual vamos a correr nuestro servidor para poder utilizar en proyecto en el frontend ya sea en el que le brindamos o en su propio proyecto personal frontend simplemente usando nuestros endpoints.
+Este es el ultimo paso en el cual vamos a correr nuestro servidor para poder utilizar el proyecto en el frontend ya sea en el que le brindamos, en su propio proyecto personal frontend simplemente usando nuestros endpoints o en postman.
 Para lograr la inicializacion del servidor debemos ejecutar el siguiente comando:
 ```sh
 node src/index.js
