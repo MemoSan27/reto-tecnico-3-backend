@@ -2,10 +2,10 @@
 ## * Proyecto Backend
 
 
-## Pasos para intalacion
+## Pasos para intalacion y funcionamiento de proyecto backend
 
 Este projecto requiere [Node.js](https://nodejs.org/) para funcionar.
-A continuacion debe de seguir los siguientes pasos para poder utilizar este proyecto frontend.
+A continuacion debe de seguir los siguientes pasos para poder utilizar este proyecto backend.
 ## 1. Clonar el respositorio:
 Para realizar este paso, es necesario abrir una terminal cualquiera de su preferencia, Bash, Power Shell, queda a su discrecion.
 Una vez abierta la terminal, hay que hacer un cd a la carpeta en la que queremos almacenar el proyecto, una vez estando en la carpeta en la que se almacenara el proyecto, hay que ejecutar el siguiente comando:
